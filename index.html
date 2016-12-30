@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SmartSMS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#08979a">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#16171a">
+    <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#18e28f">
+    <!-- build:css ../styles/lib.css -->
+    <!-- bower:css-->
+    <link rel="stylesheet" href="../../bower_components/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="../../bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="../../bower_components/slick-carousel/slick/slick-theme.css" />
+    <!-- endbower-->
+    <!-- endbuild -->
+    <!-- build:css ../styles/app.css -->
+    <!-- inject:css-->
+    <link rel="stylesheet" href="/app/css/styles.css?1">
+    <!-- endinject-->
+    <!-- endbuild -->
+    <!-- build:js ../scripts/vendor/modernizr.js -->
+    <script src="../../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="p-wr">
+        <div class="mob-menu js-mob-menu">
+            <div class="mob-menu__inner">
+                <div class="mob-menu__top">
+                    <a class="btn btn--user btn--user--big" href="http://smart-sms.ru/auth/login" target="_blank">Login</a>
+                    <button class="btn-burger _close js-mob-menu-close" type="button"><i></i></button>
+                </div>
+                <div class="mob-menu__items">
+                    <ul>
+                        <li><a class="js-goto-btn _mob" data-href="2" href="#!">about</a></li>
+                        <li><a class="js-goto-btn _mob" data-href="3" href="#!">features</a></li>
+                        <li><a class="js-goto-btn _mob" data-href="4" href="#!">how it works</a></li>
+                        <li><a class="js-goto-btn _mob" data-href="5" href="#!">cases</a></li>
+                        <li><a class="js-goto-btn _mob" data-href="6" href="#!">try it now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page-wr">
+            <header class="header wrapper js-header">
+                <!-- <div class="header__logo">
+                    <a class="logo" href="#!"><span>SmartSMS</span></a>
+                </div> -->
+                <div class="header__logo js-header-logo">
+                    <button class="logo js-goto-btn" type="button" data-href="1">
+                        <svg class="logo__svg" viewBox="0 0 219.3 193.1">
+                            <path fill="url(#SVGID_6_)" class="logo__path-plane" d="M0,118.4c-0.3-2,0.9-2.9,0.9-2.9c45-42.2,162-67.1,166.8-68.2c1.2-0.3,3.2,0.1,4.1,1
+                                     c0.9,0.9,1.3,2.2,1.1,3.4c-0.6,3.4-14.5,84.6-62.7,136.7c0,0-0.8,1-2.3,1.2c-1.5,0.2-2.7-0.7-2.7-0.7l-22.2-15.4
+                                     c-0.1,0.1-0.3,0.3-0.4,0.4l-26.1,17.6c-0.6,0.4-1.4,0.6-2.1,0.6c-0.6,0-1.1-0.1-1.6-0.4c-1.2-0.6-2-1.8-2.2-3.1l-3.5-40.1
+                                     c0,0-41.5-25.4-44.2-27.1C1.6,120.7,0.2,119.7,0,118.4z M118.9,129.4l-5.9,44c11.8-14.8,21.1-31.5,28.5-47.7L118.9,129.4z
+                                     M137.1,118.7L87,85.1l-4.4,42.4L137.1,118.7z M79.7,81.9c-22.2,8.5-44.3,18.8-61.2,30.6l58.9-8.7L79.7,81.9z M76.4,168.9l-13.9-9.6
+                                     c-1.7-1.2-2.2-3.6-1-5.3c1.2-1.7,3.6-2.2,5.3-1l37.6,26.1l6.5-48.4l-32,5.2c-0.2,0-0.4,0.1-0.6,0.1c-1,0-1.9-0.4-2.6-1
+                                     c-0.9-0.8-1.3-2-1.2-3.2l2.1-20l-60.7,8.9l36.8,22.5c1.3,0.8,1.9,2.1,1.8,3.5c0,0.2,0.1,0.3,0.1,0.5l3,34.4L76.4,168.9z M164.3,56.1
+                                     C152.1,59,122,66.6,90.2,78l55.8,37.4C156.6,89.6,162.2,66.4,164.3,56.1z" />
+                            <path fill="#71BF5E" class="logo__path-dot" d="M219.3,14.4c0,7.9-6.4,14.4-14.4,14.4c-7.9,0-14.4-6.4-14.4-14.4C190.6,6.4,197,0,204.9,0
+                                     C212.9,0,219.3,6.4,219.3,14.4z" />
+                        </svg>
+                        <span>SmartSMS</span>
+                    </button>
+                </div>
+                <div class="header__menu">
+                    <a class="btn btn--user js-user-btn" href="http://smart-sms.ru/auth/login" target="_blank">Profile</a>
+                    <button id="open-button" class="btn-burger _menu js-menu-btn" type="button"><i></i></button>
+                </div>
+            </header>
+            <div class="page-nav">
+                <button class="page-nav__btn js-page-nav _prev _hidden" type="button">Предыдущая страница</button>
+                <button class="page-nav__btn js-page-nav _next _hidden" type="button">Следующая страница</button>
+            </div>
+            <div class="pages">
+                <div class="page page-1 active">
+                    <div class="page__part page__full">
+                        <div class="page__content">
+                            <div class="preloader">
+                                <svg viewBox="0 0 400 400" class="preloader__start">
+                                    <linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="0" y1="100" x2="200" y2="100">
+                                        <stop offset="0.1916" style="stop-color:#16171A" />
+                                        <stop offset="0.2264" style="stop-color:#172622" />
+                                        <stop offset="0.2932" style="stop-color:#194D37" />
+                                        <stop offset="0.3852" style="stop-color:#1C8C5A" />
+                                        <stop offset="0.498" style="stop-color:#20E289" />
+                                        <stop offset="0.5" style="stop-color:#20E48A" />
+                                    </linearGradient>
+                                    <path fill="url(#SVGID_11_)" d="M2,200H0C0,89.7,89.7,0,200,0v2C90.8,2,2,90.8,2,200z" />
+                                </svg>
+                                <svg class="preloader__svg" viewBox="0 0 400 400">
+                                    <path class="preloader__circle" d="M200,0 a200,200 0 0,1 0,400 a200,200 0 0,1 0,-400" />
+                                    <path class="preloader__circle-2" d="M200,-56 a256,256 0 0,1 0,512 a256,256 0 0,1 0,-512" />
+                                    <path class="preloader__circle-3" d="M200,-115 a315,315 0 0,1 0,630 a315,315 0 0,1 0,-630" />
+                                    <path class="preloader__progress" d="M200,1 a199,199 0 0,1 0,398 a199,199 0 0,1 0,-398" />
+                                </svg>
+                                <svg class="preloader__plane" viewBox="0 0 219.3 193.1">
+                                    <defs>
+                                        <!-- step 1 -->
+                                        <path fill="#51BC81" class="preloader__plane-step-1" d="M161.9,125.3l-15.7-78.2c-0.4-1.9-2.1-3.1-4-2.9l-80.9,9.1c-1.4-0.6-2.9-1-4.4-1L11.5,20.8
+                                           C10.4,20,9,20,7.8,20.6c-1.2,0.6-1.9,1.8-1.8,3.2l1.9,95c0,1.4,0.9,2.7,2.2,3.2c0.8,1.5,2,2.9,3.5,4l94.7,65.2c1.9,1.3,4.1,2,6.4,2
+                                           c3.7,0,7.2-1.8,9.3-4.9l36.5-52.9C162.6,132.2,163,128.6,161.9,125.3z M139.7,51.9l12.9,64.2L70.7,59.6L139.7,51.9z M48.8,55.3
+                                           c-0.6,0.6-1.2,1.2-1.7,1.9l-32.6,47.3l-1.5-74L48.8,55.3z M17.7,119.8C17.7,119.8,17.7,119.8,17.7,119.8c-2.5-3.7,0.7-8,0.7-8
+                                           l34.8-50.5c0.1-0.2,0.3-0.4,0.4-0.5c0.6,0.3,0.8-1.2,1.4-1.7c0.2,0,0.5,0,0.7,0l3.8,1.8l36.4,25l8.6,5.9l3.9,2.7
+                                           c-0.4,0.6-0.6,1.3-0.6,2l0.6,85.8L17.7,119.8z M154.5,131.1l-34.7,50.4c0,0-1.5,3.4-4.4,3.9c0-0.2,0.1-0.4,0.1-0.7l-0.6-85.8l7.2,5
+                                           v0l31.4,21.7C155.2,126.8,155.7,129.3,154.5,131.1z" />
+                                        <!-- step 1 end -->
+                                        <!-- step 2 -->
+                                        <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="8.6999" y1="118.6371" x2="162.4704" y2="118.6371">
+                                            <stop offset="0" style="stop-color:#42BA92" />
+                                            <stop offset="1" style="stop-color:#71BF5E" />
+                                        </linearGradient>
+                                        <path fill="url(#SVGID_2_)" class="preloader__plane-step-2" d="M161.9,125.3l-15.7-78.2c-0.4-1.9-2.1-3.1-4-2.9l-80.9,9.1c-1.5-0.7-3.1-1-4.7-1
+                                           c-3.7,0-7.2,1.8-9.3,4.9l-36.5,52.9c-3.5,5.1-2.2,12.2,2.9,15.7l94.7,65.2c1.9,1.3,4.1,2,6.4,2c3.7,0,7.2-1.8,9.3-4.9l36.5-52.9
+                                           C162.6,132.2,163,128.6,161.9,125.3z M152.6,116L70.7,59.6l69-7.7L152.6,116z M53.2,61.3c0.1-0.2,0.3-0.4,0.4-0.5
+                                           c0.7,0.4,1.4,0.6,2.2,0.5l3.7-0.4l36.4,25l-77.5,25.9L53.2,61.3z M17.7,119.8C17.7,119.8,17.7,119.8,17.7,119.8l85.7-28.7l10.9,7.5
+                                           c-0.4,0.6-0.6,1.2-0.6,2l-1.8,84.2L17.7,119.8z M154.5,131.1l-35.1,51l1.7-78.9l32.4,22.3C155.2,126.8,155.7,129.3,154.5,131.1z" />
+                                        <!-- step 2 end -->
+                                        <!-- step 3 -->
+                                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="8.7002" y1="122.6644" x2="162.4704" y2="122.6644">
+                                            <stop offset="0" style="stop-color:#42BA92" />
+                                            <stop offset="1" style="stop-color:#71BF5E" />
+                                        </linearGradient>
+                                        <path fill="url(#SVGID_1_)" class="preloader__plane-step-3" d="M161.9,125.3c0,0,0-0.1,0-0.1c-0.8-2.2-2.2-4.2-4.3-5.7L62.9,54.3c-1.9-1.3-4.1-2-6.4-2
+                                           c-3.7,0-7.2,1.8-9.3,4.9l-36.5,52.9c-3.5,5.1-2.2,12.2,2.9,15.7l94.7,65.2c1.9,1.3,4.1,2,6.4,2c3.7,0,7.2-1.8,9.3-4.9l36.5-52.9
+                                           C162.6,132.2,163,128.5,161.9,125.3z M150,123.2l-70.5,5L60.4,61.4L150,123.2z M52.9,61.8l10.4,36.4l-45,13.8L52.9,61.8z
+                                           M17.7,119.8C17.7,119.8,17.7,119.8,17.7,119.8l47.6-14.6l8,27.8c0.5,1.6,1.9,2.7,3.5,2.7c0.1,0,0.2,0,0.3,0l36.6-2.6l-1.7,51.6
+                                           L17.7,119.8z M119.4,182l1.6-49.4l33.9-2.4c-0.1,0.3-0.3,0.6-0.5,0.9L119.4,182z" />
+                                        <!-- step 3 end -->
+                                        <!-- step 4 -->
+                                        <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="5.973" y1="128.1748" x2="154.3039" y2="128.1748">
+                                            <stop offset="0" style="stop-color:#42BA92" />
+                                            <stop offset="1" style="stop-color:#71BF5E" />
+                                        </linearGradient>
+                                        <path fill="url(#SVGID_3_)" class="preloader__plane-step-4" d="M153.1,113.6c0-0.1-0.1-0.2-0.1-0.3c-0.9-1.9-2.3-3.7-4.1-4.9L86.2,65.2c-1.5-1.1-3.3-1.7-5.2-1.7
+                                           c-2.7,0-5.3,1.2-7.2,3.3L9,107.9l-0.4,0.5c-3.7,4.8-3.4,11.4,0.6,15l0.2,0.2l101.4,66.6c2,1.7,4.3,2.6,6.7,2.6c4,0,7.6-2.6,9.3-6.8
+                                           l26.6-62.6C154.7,120.4,154.5,116.7,153.1,113.6z M141.4,112.1l-56.9,4.8l-0.6-44.4L141.4,112.1z M76.6,73.7l0.3,23.1
+                                           c-0.3,0-0.6,0-0.9,0.1l-55.7,12.5L76.6,73.7z M14.4,118.2L77,104.1l0.2,16.8c0,1,0.4,2,1.2,2.7c0.7,0.6,1.6,0.9,2.5,0.9
+                                           c0.1,0,0.2,0,0.3,0l30.8-2.6l2.4,61.9L14.4,118.2z M146.7,120.6l-25.2,59.1l-2.3-58.4l27.8-2.4C147,119.5,146.9,120.1,146.7,120.6z" />
+                                        <!-- step 4 end -->
+                                        <!-- step 5 -->
+                                        <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="5.9728" y1="128.183" x2="154.3041" y2="128.183">
+                                            <stop offset="0" style="stop-color:#42BA92" />
+                                            <stop offset="1" style="stop-color:#71BF5E" />
+                                        </linearGradient>
+                                        <path fill="url(#SVGID_4_)" class="preloader__plane-step-5" d="M153.1,113.6c0-0.1-0.1-0.2-0.1-0.3c-0.9-1.9-2.3-3.7-4.1-4.9L86.2,65.2c-3.8-2.7-9.2-2-12.4,1.6
+                                           L9.5,107.5c-0.4,0.2-0.7,0.5-1,0.9c-3.7,4.8-3.4,11.4,0.6,15c0.1,0.1,0.3,0.2,0.4,0.3l37.1,24.6l2.3,22c0.2,1.9,1.8,3.3,3.6,3.3
+                                           c0,0,0.1,0,0.1,0l30.5-0.7c0.4,0,0.7-0.1,1.1-0.2l26.5,17.4c2,1.7,4.3,2.6,6.7,2.6c0.6,0,1.3-0.1,1.9-0.2c3.2-0.7,5.9-3.1,7.4-6.6
+                                           l26.6-62.6C154.7,120.4,154.5,116.7,153.1,113.6z M141.4,112.1l-56.9,4.8l-0.6-44.4L141.4,112.1z M76.6,73.7l0.3,23.1
+                                           c-0.3,0-0.6,0-0.9,0.1l-55.7,12.5L76.6,73.7z M67,152.7c-1.7-1.1-4-0.6-5.1,1c-1.1,1.7-0.6,4,1.1,5.1l10.7,7l-17.8,0.4l-2.1-20.4
+                                           c0-0.1,0-0.1,0-0.2c0-0.1,0-0.3-0.1-0.4c0-0.1-0.1-0.2-0.1-0.3c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.1-0.1-0.2-0.2-0.3
+                                           c-0.1-0.1-0.1-0.2-0.2-0.3c-0.1-0.1-0.1-0.2-0.2-0.3c-0.1-0.1-0.2-0.2-0.3-0.2c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1-0.1-0.1-0.1
+                                           l-37.7-25L77,104.1l0.2,16.8c0,1,0.4,2,1.2,2.7c0.7,0.6,1.6,0.9,2.5,0.9c0.1,0,0.2,0,0.3,0l30.8-2.6l2.4,61.9L67,152.7z
+                                           M146.7,120.6l-25.2,59.1l-2.3-58.4l27.8-2.4C147,119.5,146.9,120.1,146.7,120.6z" />
+                                        <!-- step 5 end -->
+                                        <!-- step 6 -->
+                                        <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="5.9676" y1="128.1789" x2="154.3093" y2="128.1789">
+                                            <stop offset="0" style="stop-color:#42BA92" />
+                                            <stop offset="1" style="stop-color:#71BF5E" />
+                                        </linearGradient>
+                                        <path fill="url(#SVGID_5_)" class="preloader__plane-step-6" d="M154.3,116.8l-0.9-37.2c0-1.7-1.3-3.2-3-3.5L82.2,63.6c-0.3-0.1-0.7-0.1-1,0
+                                           c-2.7-0.1-5.5,1.1-7.4,3.2L9.5,107.5c-0.4,0.2-0.7,0.5-1,0.9c-3.7,4.8-3.4,11.4,0.6,15c0.1,0.1,0.3,0.2,0.4,0.3l37.1,24.6l4.2,40.1
+                                           c0.1,1.3,0.9,2.4,2.1,2.9c0.5,0.2,1,0.4,1.6,0.4c0.7,0,1.4-0.2,2-0.6l27.9-18.3l26.4,17.3c2,1.7,4.3,2.6,6.7,2.6
+                                           c0.6,0,1.3-0.1,1.9-0.2c3.2-0.7,5.9-3.1,7.4-6.6l26.6-62.6c0.8-1.8,1-3.8,0.8-5.8C154.3,117.4,154.3,117.1,154.3,116.8z M84.5,116.9
+                                           l-0.6-44.4l57.5,39.6L84.5,116.9z M146.7,106.9L99.2,74.1l47,8.6L146.7,106.9z M76.6,73.7l0.3,23.1c-0.3,0-0.6,0-0.9,0.1l-55.7,12.5
+                                           L76.6,73.7z M67,152.7c-1.7-1.1-4-0.6-5.1,1c-1.1,1.7-0.6,4,1.1,5.1l14.7,9.7l-20.2,13.2l-3.7-35.9c0-0.1,0-0.1,0-0.2
+                                           c0-0.1,0-0.3-0.1-0.4c0-0.1-0.1-0.2-0.1-0.3c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.1-0.1-0.2-0.2-0.3c-0.1-0.1-0.1-0.2-0.2-0.3
+                                           c-0.1-0.1-0.1-0.2-0.2-0.3c-0.1-0.1-0.2-0.2-0.3-0.2c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1-0.1-0.1-0.1l-37.7-25L77,104.1l0.2,16.8
+                                           c0,1,0.4,2,1.2,2.7c0.7,0.6,1.6,0.9,2.5,0.9c0.1,0,0.2,0,0.3,0l30.8-2.6l2.4,61.9L67,152.7z M146.7,120.6l-25.2,59.1l-2.3-58.4
+                                           l27.8-2.4C147,119.5,146.9,120.1,146.7,120.6z" />
+                                        <!-- step 6 end -->
+                                        <!-- step 7 -->
+                                        <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="0" y1="119.6794" x2="173.0551" y2="119.6794">
+                                            <stop offset="0" style="stop-color:#42BA92" />
+                                            <stop offset="1" style="stop-color:#71BF5E" />
+                                        </linearGradient>
+                                        <path fill="url(#SVGID_6_)" class="preloader__plane-step-7" d="M0,118.4c-0.3-2,0.9-2.9,0.9-2.9c45-42.2,162-67.1,166.8-68.2c1.2-0.3,3.2,0.1,4.1,1
+                                           c0.9,0.9,1.3,2.2,1.1,3.4c-0.6,3.4-14.5,84.6-62.7,136.7c0,0-0.8,1-2.3,1.2c-1.5,0.2-2.7-0.7-2.7-0.7l-22.2-15.4
+                                           c-0.1,0.1-0.3,0.3-0.4,0.4l-26.1,17.6c-0.6,0.4-1.4,0.6-2.1,0.6c-0.6,0-1.1-0.1-1.6-0.4c-1.2-0.6-2-1.8-2.2-3.1l-3.5-40.1
+                                           c0,0-41.5-25.4-44.2-27.1C1.6,120.7,0.2,119.7,0,118.4z M118.9,129.4l-5.9,44c11.8-14.8,21.1-31.5,28.5-47.7L118.9,129.4z
+                                           M137.1,118.7L87,85.1l-4.4,42.4L137.1,118.7z M79.7,81.9c-22.2,8.5-44.3,18.8-61.2,30.6l58.9-8.7L79.7,81.9z M76.4,168.9l-13.9-9.6
+                                           c-1.7-1.2-2.2-3.6-1-5.3c1.2-1.7,3.6-2.2,5.3-1l37.6,26.1l6.5-48.4l-32,5.2c-0.2,0-0.4,0.1-0.6,0.1c-1,0-1.9-0.4-2.6-1
+                                           c-0.9-0.8-1.3-2-1.2-3.2l2.1-20l-60.7,8.9l36.8,22.5c1.3,0.8,1.9,2.1,1.8,3.5c0,0.2,0.1,0.3,0.1,0.5l3,34.4L76.4,168.9z M164.3,56.1
+                                           C152.1,59,122,66.6,90.2,78l55.8,37.4C156.6,89.6,162.2,66.4,164.3,56.1z" />
+                                        <!-- step 7 end -->
+                                    </defs>
+                                    <path fill="#51BC81" class="preloader__plane-path" d="M161.9,125.3l-15.7-78.2c-0.4-1.9-2.1-3.1-4-2.9l-80.9,9.1c-1.4-0.6-2.9-1-4.4-1L11.5,20.8
+                                         C10.4,20,9,20,7.8,20.6c-1.2,0.6-1.9,1.8-1.8,3.2l1.9,95c0,1.4,0.9,2.7,2.2,3.2c0.8,1.5,2,2.9,3.5,4l94.7,65.2c1.9,1.3,4.1,2,6.4,2
+                                         c3.7,0,7.2-1.8,9.3-4.9l36.5-52.9C162.6,132.2,163,128.6,161.9,125.3z M139.7,51.9l12.9,64.2L70.7,59.6L139.7,51.9z M48.8,55.3
+                                         c-0.6,0.6-1.2,1.2-1.7,1.9l-32.6,47.3l-1.5-74L48.8,55.3z M17.7,119.8C17.7,119.8,17.7,119.8,17.7,119.8c-2.5-3.7,0.7-8,0.7-8
+                                         l34.8-50.5c0.1-0.2,0.3-0.4,0.4-0.5c0.6,0.3,0.8-1.2,1.4-1.7c0.2,0,0.5,0,0.7,0l3.8,1.8l36.4,25l8.6,5.9l3.9,2.7
+                                         c-0.4,0.6-0.6,1.3-0.6,2l0.6,85.8L17.7,119.8z M154.5,131.1l-34.7,50.4c0,0-1.5,3.4-4.4,3.9c0-0.2,0.1-0.4,0.1-0.7l-0.6-85.8l7.2,5
+                                         v0l31.4,21.7C155.2,126.8,155.7,129.3,154.5,131.1z" />
+                                </svg>
+                                <div class="rotater">
+                                    <div class="rotater__marker"></div>
+                                </div>
+                            </div>
+                            <div class="central-nav">
+                                <div class="central-nav__desc">
+                                    <img class="central-nav__big-logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/smart-sms.png" />
+                                    <div class="central-nav__slogan">Smart communication channel for your business</div>
+                                    <div class="central-nav__btns">
+                                        <button class="btn btn--green js-goto-btn" data-href="2">about</button>
+                                        <button class="btn btn--white js-goto-btn" data-href="6">try it</button>
+                                    </div>
+                                </div>
+                                <div class="central-nav__plane-cont">
+                                    <div class="central-nav__rotating-plane"></div>
+                                </div>
+                                <div class="central-nav__items">
+                                    <div class="central-nav__item central-nav__item-1">
+                                        <svg class="central-nav__item-dot js-goto-btn" data-href="2">
+                                            <circle class="central-nav__item-circle_outer" r="12.5" cx="7.5" cy="7.5" />
+                                            <circle class="central-nav__item-circle_inner" r="7.5" cx="7.5" cy="7.5" />
+                                        </svg>
+                                        <span class="central-nav__item-text">About</span>
+                                    </div>
+                                    <div class="central-nav__item central-nav__item-2">
+                                        <svg class="central-nav__item-dot js-goto-btn" data-href="3">
+                                            <circle class="central-nav__item-circle_outer" r="12.5" cx="7.5" cy="7.5" />
+                                            <circle class="central-nav__item-circle_inner" r="7.5" cx="7.5" cy="7.5" />
+                                        </svg>
+                                        <span class="central-nav__item-text">Features</span>
+                                    </div>
+                                    <div class="central-nav__item central-nav__item-3">
+                                        <svg class="central-nav__item-dot js-goto-btn" data-href="4">
+                                            <circle class="central-nav__item-circle_outer" r="12.5" cx="7.5" cy="7.5" />
+                                            <circle class="central-nav__item-circle_inner" r="7.5" cx="7.5" cy="7.5" />
+                                        </svg>
+                                        <span class="central-nav__item-text">How it works</span>
+                                    </div>
+                                    <div class="central-nav__item central-nav__item-4">
+                                        <svg class="central-nav__item-dot js-goto-btn" data-href="5">
+                                            <circle class="central-nav__item-circle_outer" r="12.5" cx="7.5" cy="7.5" />
+                                            <circle class="central-nav__item-circle_inner" r="7.5" cx="7.5" cy="7.5" />
+                                        </svg>
+                                        <span class="central-nav__item-text">Cases</span>
+                                    </div>
+                                    <div class="central-nav__item central-nav__item-5">
+                                        <svg class="central-nav__item-dot js-goto-btn" data-href="6">
+                                            <circle class="central-nav__item-circle_outer" r="12.5" cx="7.5" cy="7.5" />
+                                            <circle class="central-nav__item-circle_inner" r="7.5" cx="7.5" cy="7.5" />
+                                        </svg>
+                                        <span class="central-nav__item-text">Try it now</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page page-2">
+                    <div class="page__part page__half page__half--left">
+                        <div class="page__content"></div>
+                    </div>
+                    <div class="page__part page__half page__half--right">
+                        <div class="page__content">
+                            <div class="about__body-inner">
+                                <div class="title-block"><span>1.</span></div>
+                                <div class="about__body-desc">
+                                    <h3>SmartSMS — new level operators service used big data for the smart communication with mobile users of your business</h3>
+                                    <p>The mobile user is required to give its consent to the use of data on specific sites, then he will be able to receive personalized sms offers from these resources</p>
+                                    <div class="btn-wr">
+                                        <button class="btn btn--logo js-goto-btn" data-href="6"><span>Try it now</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page page-3">
+                    <div class="page__part page__half page__half--left">
+                        <div class="page__content">
+                            <div class="if-slider__body js-if-slider">
+                                <div class="if-slide sl_0 js-if-slide _active">
+                                    <div class="if-slide__inner">
+                                        <div class="if-slide__img">
+                                            <img src="/app/images/userfiles/v1.png">
+                                        </div>
+                                        <div class="if-slide__desc">
+                                            <p>Service «Smart Widget», built into our system automatically identifies the mobile Internet users to your website.
+                                            </p>
+                                            <p><span>Mobile visitors expressly agree to the use of their personal data by pressing the confirm button in the public offer «SmartWidget»</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="if-slide sl_1 js-if-slide">
+                                    <div class="if-slide__inner">
+                                        <div class="if-slide__img">
+                                            <div>
+                                                <img src="/app/images/userfiles/v3.png">
+                                            </div>
+                                        </div>
+                                        <div class="if-slide__desc">
+                                            <div class="if-slide-desc">
+                                                <p><span>
+                                                                                                    After identification of mobile visitors to your site, you can send a personalized message on his device: a special offer, discount, or simply return the user to your website</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="if-slide sl_2 js-if-slide">
+                                    <div class="if-slide__inner">
+                                        <div class="if-slide__img">
+                                            <div>
+                                                <img src="/app/images/userfiles/v3-1.png">
+                                            </div>
+                                        </div>
+                                        <div class="if-slide__desc">
+                                            <p><span>Online analytics SmartSMS - a tool for monitoring the effectiveness of the service on your site in real time. Key performance indicators are collected on a single page, and change throughout the day, reflecting the actual statistics of sent messages, conversion rates and operating cost data.</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__part page__half page__half--right">
+                        <div class="page__content">
+                            <div class="feat-wr">
+                                <div class="title-block">
+                                    <span>2.</span>
+                                    <h2>features</h2>
+                                </div>
+                                <div class="if-slider__head">
+                                    <div class="if-slider__head--inner">
+                                        <button class="if-slider__btn js-if-slider-btn _active" data-id="0">Automatic identification of mobile visitors </button>
+                                        <button class="if-slider__btn js-if-slider-btn" data-id="1">Send personalized messages</button>
+                                        <button class="if-slider__btn js-if-slider-btn" data-id="2">Online analytics SmartSMS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page page-4">
+                    <div class="page__part page__third page__third--left js-how-to-block">
+                        <div class="bgbg">
+                            <div class="bg-d"></div>
+                            <div class="howto__desc howto__desc--1">
+                                <p>We will send a letter with the data for the login SmartSMS. Enter your phone to our manager could contact you and help set up the service. We do not share your data with third parties and will not send advertising without your consent.</p>
+                            </div>
+                        </div>
+                        <div class="how-one-wr">
+                            <div class="how-one">
+                                <div class="how-one__inner wrapper">
+                                    <div class="how-one__number">
+                                        <span>01</span>
+                                    </div>
+                                    <div class="how-one__desc">
+                                        <div class="how-one__title">
+                                            <span>Registration</span></i>
+                                        </div>
+                                        <div class="how-one__body">
+                                            <p>Enter your name, email address and phone to begin use SmartSMS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__part page__third page__third--center js-how-to-block">
+                        <div class="bgbg">
+                            <div class="bg-d"></div>
+                            <div class="howto__desc howto__desc--4">
+                                <p>We offer a catalog of ready-made templates of SMS messages, the effectiveness of which is confirmed by the best advertising campaigns.</p>
+                            </div>
+                            <div class="howto__desc howto__desc--2">
+                                <p>Customize SmartWidget style of your site</p>
+                            </div>
+                            <div class="howto__desc howto__desc--3">
+                                <p>Increas the efficiency of SmartSMS, choosing the optimal time delay to re-communicate with the client after visiting your site.</p>
+                            </div>
+                        </div>
+                        <div class="how-one-wr">
+                            <div class="how-one">
+                                <div class="how-one__inner wrapper">
+                                    <div class="how-one__number">
+                                        <span>02</span>
+                                    </div>
+                                    <div class="how-one__desc">
+                                        <div class="how-one__title">
+                                            <span>Settings</span></i>
+                                        </div>
+                                        <div class="how-one__body">
+                                            <p>Make a personal message, set parameters and take the SmartVidget code on the landing page.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__part page__third page__third--right js-how-to-block">
+                        <div class="bgbg">
+                            <div class="bg-d"></div>
+                            <div class="howto__desc howto__desc--5">
+                                <p>Followers of our service covers 100% of mobile subscribers in Russia, which is connected to the Internet access service</p>
+                            </div>
+                            <div class="howto__desc howto__desc--6">
+                                <p>Mobile operators: Megafone, MTS, Beeline, Tele2</p>
+                                <p>Price per <i>one contact – 6 RUB</i></p>
+                            </div>
+                        </div>
+                        <div class="how-one-wr">
+                            <div class="how-one">
+                                <div class="how-one__inner wrapper">
+                                    <div class="how-one__number">
+                                        <span>03</span>
+                                    </div>
+                                    <div class="how-one__desc">
+                                        <div class="how-one__title">
+                                            <span>Right on target</span></i>
+                                        </div>
+                                        <div class="how-one__body">
+                                            <p>Start an advertising campaign and personal SMS messages automatically starts sending visitors to your site.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page page-5">
+                    <div class="page__part page__half page__half--left">
+                        <div class="page__content">
+                            <div class="cases-inner">
+                                <div class="ic-list inactive-team-list">
+                                    <div class="case--row">
+                                        <div class="case case--blank js-case"></div>
+                                        <div class="case js-case case--grey-switch">
+                                            <div class="case__inner">
+                                                <div class="case__logo"></div>
+                                            </div>
+                                        </div>
+                                        <div class="case js-case case--no-column case-mid-left"></div>
+                                    </div>
+                                    <div class="case--row">
+                                        <div class="case js-case case--blank case--no-row"></div>
+                                        <div class="case js-case case--no-row"></div>
+                                        <div class="case js-case case--no-row case--grey case-mid-left case--no-column"></div>
+                                    </div>
+                                    <div class="case--row">
+                                        <div class="case case--blank js-case">
+                                            <div class="case__inner">
+                                                <div class="case__logo"></div>
+                                            </div>
+                                        </div>
+                                        <div class="case case--grey js-case">
+                                            <div class="case__inner">
+                                                <div class="case__logo"></div>
+                                            </div>
+                                        </div>
+                                        <div class="case js-case case--no-column case-mid-left"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__part page__half page__half--right">
+                        <div class="page__content">
+                            <div class="cases-inner">
+                                <div class="ic-list inactive-team-list">
+                                    <div class="case--row">
+                                        <div class="case js-case case--no-column case-mid-right"></div>
+                                        <div class="case case--grey js-case">
+                                            <div class="case__inner">
+                                                <div class="case__logo"></div>
+                                            </div>
+                                        </div>
+                                        <div class="case case--blank js-case">
+                                            <div class="case__inner">
+                                                <div class="case__logo"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="case--row">
+                                        <div class="case js-case case--no-row case--grey case--no-column case-mid-right"></div>
+                                        <div class="case js-case case--no-row"></div>
+                                        <div class="case js-case case--no-row case--blank"></div>
+                                    </div>
+                                    <div class="case--row">
+                                        <div class="case js-case case--no-column case-mid-right"></div>
+                                        <div class="case js-case case--grey-switch">
+                                            <div class="case__inner">
+                                                <div class="case__logo"></div>
+                                            </div>
+                                        </div>
+                                        <div class="case case--blank js-case">
+                                            <div class="case__inner">
+                                                <div class="case__logo"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page page-6">
+                    <div class="page__part page__half page__half--left">
+                        <div class="page__content">
+                            <div class="last-page__circles last-page__circles--left">
+                                <div class="last-page__bg-cont">
+                                    <div class="last-page__bg"></div>
+                                </div>
+                                <svg class="last-page__circles-svg" viewBox="0 0 200 400">
+                                    <path class="last-page__circle last-page__circle-1" d="M200,400 a200,200 0 0,1 0,-400" />
+                                    <path class="last-page__circle last-page__circle-2" d="M200,456 a256,256 0 0,1 0,-512" />
+                                    <path class="last-page__circle last-page__circle-3" d="M200,515 a315,315 0 0,1 0,-630" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__part page__half page__half--right">
+                        <div class="page__content">
+                            <div class="last-page__circles last-page__circles--right">
+                                <svg class="last-page__circles-svg" viewBox="0 0 200 400">
+                                    <path class="last-page__circle last-page__circle-1" d="M0,0 a200,200 0 0,1 0,400" />
+                                    <path class="last-page__circle last-page__circle-2" d="M0,-56 a256,256 0 0,1 0,512" />
+                                    <path class="last-page__circle last-page__circle-3" d="M0,-115 a315,315 0 0,1 0,630" />
+                                </svg>
+                            </div>
+                            <div class="index-try__inner">
+                                <div class="title-block">
+                                    <span>5.</span>
+                                    <h2>Let's <br>start</h2>
+                                </div>
+                                <form id="contact-form" class="ih-form wrapper" action="#" method="POST">
+                                    <p>After registration you will get to your personal account, where you can create a SmartSMS campaign </p>
+                                    <div id="thank-you" class="thank-you">Thank you! Well done.</div>
+                                    <div class="form-row">
+                                        <input type="text" class="input-one" name="name" required placeholder="Your name">
+                                        <div class="inp-dis"></div>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="email" class="input-one" name="email" required placeholder="Your email">
+                                        <div class="inp-dis"></div>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="tel" value="+7" class="input-one" name="phone" required placeholder="Your phone">
+                                        <div class="inp-dis"></div>
+                                    </div>
+                                    <button id="btn-contact-form" class="btn btn--green btn--try-form" type="submit">Start work</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer js-footer">
+                <div class="footer__inner wrapper">
+                    <div class="f-copy">
+                        <span>© 2015 SmartSMS</span>
+                    </div>
+                    <div class="f-phone"><span>+7 495</span> 269-00-99</div>
+                    <div class="f-author"><a href="http://nikoland.ru/" target="_blank">nikoland</a></div>
+                </div>
+            </footer>
+            <div class="overlay js-ic-popup-close"></div>
+            <div class="ic-popup js-ic-popup">
+                <button class="ic-popup__close js-ic-popup-close" type="button">close</button>
+                <div class="ic-slider js-ic-slider">
+                    <div class="cpopup-one">
+                        <div class="cpopup__inner">
+                            <div class="cpopup__specs">
+                                <ul>
+                                    <li><strong>Client</strong><span>Mebelion</span></li>
+                                    <li><strong>Total visitors</strong><span>1 350 000</span></li>
+                                    <li><strong>Set mobile users</strong><span>20 250</span></li>
+                                    <li><strong>Send messages</strong><span>5 730</span></li>
+                                    <li><strong>Return to website</strong><span>20.6%</span></li>
+                                    <li><strong>Conversion of new registrations</strong><span>4%</span></li>
+                                    <li><strong>Total shopping</strong><span>3%</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cpopup-one">
+                        <div class="cpopup__inner">
+                            <div class="cpopup__specs">
+                                <ul>
+                                    <li><strong>Client</strong><span>Mobile kitchen</span></li>
+                                    <li><strong>Total visitors</strong><span>20 000</span></li>
+                                    <li><strong>Set mobile users</strong><span>1 100</span></li>
+                                    <li><strong>Send messages</strong><span>85</span></li>
+                                    <li><strong>Return to website</strong><span>15%</span></li>
+                                    <li><strong>Conversion of inquiries</strong><span>5%</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cpopup-one">
+                        <div class="cpopup__inner">
+                            <div class="cpopup__specs">
+                                <ul>
+                                    <li><strong>Client</strong><span>Меховая фабрика</span></li>
+                                    <li><strong>Total visitors</strong><span>7 500 000</span></li>
+                                    <li><strong>Set mobile users</strong><span>180 000</span></li>
+                                    <li><strong>Send messages</strong><span>24 000</span></li>
+                                    <li><strong>Return to website</strong><span>4%</span></li>
+                                    <li><strong>Conversion of new registrations</strong><span>4%</span></li>
+                                    <li><strong>Total shopping</strong><span>3%</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cpopup-one">
+                        <div class="cpopup__inner">
+                            <div class="cpopup__specs">
+                                <ul>
+                                    <li><strong>Client</strong><span>Moaction</span></li>
+                                    <li><strong>Total visitors</strong><span>35 000</span></li>
+                                    <li><strong>Set mobile users</strong><span>1 900</span></li>
+                                    <li><strong>Send messages</strong><span>302</span></li>
+                                    <li><strong>Return to website</strong><span>19.3%</span></li>
+                                    <li><strong>Conversion of inquiries</strong><span>5%</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cpopup-one">
+                        <div class="cpopup__inner">
+                            <div class="cpopup__specs">
+                                <ul>
+                                    <li><strong>Client</strong><span>Пан чемодан</span></li>
+                                    <li><strong>Total visitors</strong><span>3 000 000</span></li>
+                                    <li><strong>Set mobile users</strong><span>50 130</span></li>
+                                    <li><strong>Send messages</strong><span>8 000</span></li>
+                                    <li><strong>Return to website</strong><span>18.3%</span></li>
+                                    <li><strong>ROI</strong><span>110%</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    // url - Адрес мобильной версии
+    // breakWidth - Ширина, меньше которой происходит переход на моб версию
+    // animTime - Время анимации прелоадера в секундах
+    // planeFlyAnimTime - Время полета самолетика в секундах
+    var g__options = {
+        url: 'http://pro-7.ru/smartsms/app/_html/index.php',
+        breakWidth: 992,
+        preloader: {
+            animTime: 0.3,
+            planeFlyAnimTime: 0.1
+        }
+    };
+    </script>
+    <script src="/app/_html/scripts.min.js"></script>
+    <script src="/app/_html/jquery.validate.min.js"></script>
+    <script src="/app/_html/jquery.form.min.js"></script>
+    <script>
+    //Firefox
+    $('.ic-list').bind('DOMMouseScroll', function(e) {
+        if (e.originalEvent.detail > 0) {
+            //scroll down
+            $('.ic-list').removeClass('inactive-team-list').addClass('active-team-list');
+        } else {
+            //scroll up
+            $('.ic-list').addClass('inactive-team-list').removeClass('active-team-list');
+        }
+        //prevent page fom scrolling
+        return false;
+    });
+
+    //IE, Opera, Safari
+    $('.ic-list').bind('mousewheel', function(e) {
+        if (e.originalEvent.wheelDelta < 0) {
+            //scroll down
+            $('.ic-list').removeClass('inactive-team-list').addClass('active-team-list');
+        } else {
+            //scroll up
+            $('.ic-list').addClass('inactive-team-list').removeClass('active-team-list');
+        }
+        //prevent page fom scrolling
+        return false;
+    });
+    </script>
+    <script>
+    app = (function($) {
+        var app = {
+            send: function() {
+
+                $('#contact-form').validate({
+                    rules: {
+                        name: {
+                            required: true,
+                            minlength: 2
+                        },
+                        email: {
+                            required: true,
+                            email: true,
+                            minlength: 6
+                        },
+                        phone: {
+                            required: true,
+                            minlength: 7
+                        }
+                    },
+                    messages: {
+                        name: {
+                            required: "Required!",
+                            minlength: "Must be at least 2 characters!"
+                        },
+                        email: {
+                            required: "Required!",
+                            email: "Введите email адрес!",
+                            minlength: "Must be at least 6 characters!"
+                        },
+                        phone: {
+                            required: "Required!",
+                            minlength: "There must be at least 7 characters!"
+                        }
+                    }
+                });
+
+                $('#btn-contact-form').on('click', function() {
+
+                    var form = $('#contact-form');
+
+                    if (!form.valid()) {
+                        return false;
+                    }
+
+
+                    $('#contact-form').ajaxSubmit({
+                        url: '/app/send.php',
+                        iframe: true,
+                        dataType: 'json',
+                        error: function() {
+                            alert('Ошибка отправки!');
+                        },
+                        success: function(data) {
+                            if (data['error'] == 1) {
+                                alert('Ошибка отправки!');
+                            } else {
+                                $('form')[0].reset();
+                                $('#thank-you').show();
+                            }
+                        }
+                    });
+
+                    return false;
+                });
+            }
+        };
+
+        return app;
+    })(jQuery);
+
+    var $ = jQuery.noConflict();
+    $(document).ready(function() {
+        app.send();
+    });
+    </script>
+</body>
+
+</html>
