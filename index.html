@@ -677,6 +677,19 @@
     <script src="./app/scripts/jquery.validate.min.js"></script>
     <script src="./app/scripts/jquery.form.min.js"></script>
     <script>
+    function throttle(wait) {
+        var time = Date.now();
+        return function() {
+            if ((time + wait - Date.now()) < 0) {
+                return true;
+                time = Date.now();
+            }
+            else return false;
+        }
+    }
+    $('page').bind('DOMMouseScroll',throttle(1000));
+    $('page').bind('mousewheel',throttle(1000));
+
     function shift_grid(e) {
         if (e.originalEvent.wheelDelta < 0 || e.originalEvent.detail < 0) {
             //scroll down
@@ -686,10 +699,17 @@
             }
             $('.ic-list').removeClass('inactive-team-list').addClass('active-team-list');
             $('.page-5').unbind();
+            $('.page-5').bind('DOMMouseScroll', function() {
+                return false;
+            });
+            $('.page-5').bind('mousewheel', function() {
+                return false;
+            });
             setTimeout(function() {
+                $('.page-5').unbind();
                 $('.page-5').bind('DOMMouseScroll', shift_grid);
                 $('.page-5').bind('mousewheel', shift_grid);
-            }, 500)
+            }, 1000)
         } else {
             //scroll up
             if ($('.ic-list').hasClass('inactive-team-list')) {
@@ -698,10 +718,17 @@
             }
             $('.ic-list').addClass('inactive-team-list').removeClass('active-team-list');
             $('.page-5').unbind();
+            $('.page-5').bind('DOMMouseScroll', function() {
+                return false;
+            });
+            $('.page-5').bind('mousewheel', function() {
+                return false;
+            });
             setTimeout(function() {
+                $('.page-5').unbind();
                 $('.page-5').bind('DOMMouseScroll', shift_grid);
                 $('.page-5').bind('mousewheel', shift_grid);
-            }, 500)
+            }, 1000)
         }
         //prevent page fom scrolling
         return false;
